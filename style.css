@@ -29,35 +29,38 @@ h1 {
   font-family: 'Yellowtail'  , cursive;
   color: #e1c95b;
   font-size: 55px;
+  margin-top: 40px;
 }
 
 #text-body {
   font-family: 'Permanent Marker' , cursive;
   color: #c43026;
   font-size: 30px;
+  margin: 30px 80px;
 }
 
 .prof-photo {
-  height: 180px;
-  width: 180px;
+  height: 190px;
+  width: 190px;
   border-radius: 20%;
 }
 
 .profs {
   display: flex;
   font-family: 'Caveat', cursive;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .ind-prof {
   flex: auto;
-  font-size: 20px;
 }
 
 .name {
+  font-size: 30px;
   color: #5fcce5
 }
 
 .wins {
+  font-size: 24px;
   color: white;
 }

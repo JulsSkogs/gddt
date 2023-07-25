@@ -1,11 +1,18 @@
-/* Font options are Caveat, Permanent Marker, Yellowtail and Norican */
+/* Font options are Caveat, Permanent Marker, Yellowtail */
 
 /* font-family: 'Caveat', cursive;
-font-family: 'Norican', cursive;
 font-family: 'Permanent Marker', cursive;
 font-family: 'Yellowtail', cursive; */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Norican&family=Permanent+Marker&family=Yellowtail&display=swap'); */
+
+/* Colors
+#454545
+#5fcce5
+#9d8b8d
+#c43026
+#e1c95b
+ */
 
 html {
   box-sizing: border-box;
@@ -14,25 +21,43 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  text-align: center;
+  background-color: #454545;
 }
 
-.title {
-  font-family: 'Caveat', cursive;
+h1 {
+  font-family: 'Yellowtail'  , cursive;
+  color: #e1c95b;
+  font-size: 55px;
 }
 
-.text-body {
-  font-family: 'Yellowtail', cursive;
+#text-body {
+  font-family: 'Permanent Marker' , cursive;
+  color: #c43026;
+  font-size: 30px;
 }
 
 .prof-photo {
   height: 180px;
   width: 180px;
+  border-radius: 20%;
 }
 
 .profs {
   display: flex;
+  font-family: 'Caveat', cursive;
+  margin-top: 40px;
 }
 
 .ind-prof {
-  flex: 1;
+  flex: auto;
+  font-size: 20px;
+}
+
+.name {
+  color: #5fcce5
+}
+
+.wins {
+  color: white;
 }

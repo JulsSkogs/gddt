@@ -2,7 +2,7 @@
 
 // Defining variables
 
-const draftData = [];
+let draftData = [];
 
 // Selecting DOM elements
 let chadWins = document.getElementById('#chadWins');
@@ -19,7 +19,7 @@ async function loadStats() {
     }
 });
 
-const data = await res.json(); // How do we elevate the data varieble to the global scope? does it need to be done directly or otherwise?
+const data = await res.json(); // How do we elevate the data variable to the global scope? does it need to be done directly or otherwise?
 console.log(data);
 
 updateStats(data)
@@ -28,16 +28,30 @@ updateStats(data)
 // Calculating Win Totals
 // Separate each draft as their own array and then extract the draft rank for each drafter
 function updateStats(dataArray) {
-  let draftData = dataArray.forEach((obj) => {
+  draftData = dataArray.forEach((obj) => {
     const draftNum = obj.draftNum;
     const draftTop = obj.draftTop;
     const chadPicks = obj.chadPicks;
     const jtPicks = obj.jtPicks;
     const striderPicks = obj.jtPicks;
-    const christPicks = obj.chrisPicks;
+    const chrisPicks = obj.chrisPicks;
     const guestPicks = obj.guestPicks;
     const drafters = obj.drafters;
     const ranks = obj.ranks;
     const epiNum = obj.epiNum;
+
+    draftData.push({
+      draftNum : draftNum,
+      draftTop : draftTop,
+      chadPicks : chadPicks,
+      jtPicks : jtPicks,
+      striderPicks : striderPicks,
+      chrisPicks : chrisPicks,
+      guestPicks : guestPicks,
+      drafters : drafters,
+      ranks : ranks,
+      epiNum : epiNum
+    })
   })
 }
+console.log(draftData);
